@@ -15,7 +15,7 @@ class Ship():
 		
 		#to start each new ship at the bottom centre of the screen
 		#Make the value of self.rect.bottom (the y-coordinate of the ship’s bottom) equal to the value of the screen rect’s bottom attribute)
-		self.rect.centerx = self.screen_rect.centerx
+		self.rect.center = self.screen_rect.center
 		self.rect.bottom = self.screen_rect.bottom
 		
 	#to get the image on screen use blit()method
