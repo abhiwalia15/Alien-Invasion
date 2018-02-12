@@ -20,11 +20,14 @@ class Ship():
 		
 		#Movement flag ,set the flag to false.
 		self.moving_right = False
+		self.moving_left = False
 		
 	def update(self):
 		'''update the ships movement based on the movement flag.'''
 		if self.moving_right:
 			self.rect.centerx += 1
+		if self.moving_left:
+			self.rect.centerx -= 1
 		
 	#to get the image on screen use blit()method
 	def blitme(self):
