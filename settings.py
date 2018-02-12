@@ -5,7 +5,7 @@ class Settings():
 		#screem resolution
 		
 		self.screen_width = 1200
-		self.screen_height = 800
+		self.screen_height = 600
 		
 		#background color
 		

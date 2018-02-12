@@ -13,7 +13,7 @@ def check_events(ship):
 				#when a KEYDOWN event is detected we need to check whether the key pressed is one that triggers a certain event.
 				if event.key == pygame.K_RIGHT:
 					#move the ship towards the right.
-					ship.rect.centrex += 1
+					ship.rect.centerx += 1
 						
 def update_screen(ai_settings,screen,ship):
 	'''update the images on the screen and flip to the new screen,'''
