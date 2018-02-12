@@ -9,11 +9,11 @@ def check_events(ship):
 			if event.type == pygame.QUIT:
 				sys.exit()
 	
-	elif event.type == pygame.KEYDOWN:
-		#when a KEYDOWN event is detected we need to check whether the key pressed is one that triggers a certain event.
-		if event.key == pygame.K_RIGHT:
-			#move the ship towards the right.
-			ship.rect.centrex += 1
+			elif event.type == pygame.KEYDOWN:
+				#when a KEYDOWN event is detected we need to check whether the key pressed is one that triggers a certain event.
+				if event.key == pygame.K_RIGHT:
+					#move the ship towards the right.
+					ship.rect.centrex += 1
 						
 def update_screen(ai_settings,screen,ship):
 	'''update the images on the screen and flip to the new screen,'''
