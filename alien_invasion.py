@@ -1,5 +1,6 @@
 
 import pygame
+from pygame.sprite import Group
 
 from settings import Settings
 
@@ -21,11 +22,16 @@ def run_game():
 	#make a ship
 	ship = Ship(ai_settings,screen)
 	
+	#make an empty group to store the bullets in.
+	bullets = Group()
+	
 	#start the main loop for the program.
 	while True:
 		
+		
 		gf.check_events(ship)
+		bullets.update()
 		ship.update()
 		gf.update_screen(ai_settings,screen,ship)		
-
+		
 run_game()
