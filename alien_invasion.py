@@ -16,7 +16,6 @@ def run_game():
 	
 	pygame.init()
 	#now to create a display called screen on which the game will run.
-	
 	ai_settings = Settings()
 	screen = pygame.display.set_mode((ai_settings.screen_width,ai_settings.screen_height))
 	pygame.display.set_caption("Alien Invasion-By MW")
