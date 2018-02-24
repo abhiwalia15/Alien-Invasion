@@ -50,7 +50,7 @@ def check_events(ai_settings,screen,ship,bullets):
 			elif event.type == pygame.KEYUP:
 				check_keyup_events(event,ship)
 						
-def update_screen(ai_settings,screen,ship,alien,bullets):
+def update_screen(ai_settings,screen,ship,aliens,bullets):
 	'''update the images on the screen and flip to the new screen,'''
 	
 	#redraw the screen during each pass through the loop
@@ -63,7 +63,10 @@ def update_screen(ai_settings,screen,ship,alien,bullets):
 	#draw the ship on the screen using the blit() method , and it is written after creating the background.
 	ship.blitme()
 	
-	alien.blitme()
+	#when you call draw() methon on a group , pygame automatically 
+	#draws each elements in the group at that position defined
+	#by its rect attribute
+	aliens.draw(screen)
 	
 	#make the most recently drawn screen visible.
 	pygame.display.flip()
