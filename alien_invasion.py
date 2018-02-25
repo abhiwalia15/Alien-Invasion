@@ -32,7 +32,7 @@ def run_game():
 	#make an empty group to store the fleet of aliens in it.
 	aliens = Group()
 	#create the fleet of aliens
-	gf.create_fleet(ai_settings,screen,aliens)
+	gf.create_fleet(ai_settings,screen,ship,aliens)
 	
 	#start the main loop for the program.
 	while True:
