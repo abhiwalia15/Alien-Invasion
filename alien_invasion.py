@@ -1,4 +1,3 @@
-
 import pygame
 from pygame.sprite import Group
 
@@ -41,7 +40,7 @@ def run_game():
 		ship.update()
 		gf.update_bullet(bullets)
 		#we update the alien's position after the bullets have been updated , because we'll soon be checking to see whether any bullets hit any alien.
-		gf.update_aliens(aliens)
+		gf.update_aliens(ai_settings,aliens)
 		gf.update_screen(ai_settings, screen, ship, aliens, bullets)
 		
 run_game()
