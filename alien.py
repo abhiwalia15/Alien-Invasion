@@ -12,7 +12,7 @@ class Alien(Sprite):
 		self.screen = screen 
 		self.ai_settings = ai_settings 
 		
-		#load the alien image adn set its rect attribute
+		#load the alien image and set its rect attribute
 		self.image = pygame.image.load('images/alien.bmp')
 		self.rect = self.image.get_rect()
 		
@@ -26,3 +26,8 @@ class Alien(Sprite):
 	def blitme(self):
 		'''draw the alien at its current position'''
 		self.screen.blit(self.image,self.rect)
+		
+	def update(self):
+		'''move the fleet of aliens right'''
+		self.x += self.ai_settings.alien_speed_factor
+		self.rect.x = self.x
