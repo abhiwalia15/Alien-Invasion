@@ -13,6 +13,7 @@ class Settings():
 
 		#ship speed settings
 		self.ship_speed_factor = 2
+		self.ship_limit = 3
 		
 		#settings for bullets,these will create bullets of dark grey color and will travel up untill it disappears.
 		self.bullet_speed_factor = 3
