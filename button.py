@@ -26,7 +26,7 @@ class Button():
 		'''turn msg into a rendered image and centrix text on the button'''
 		self.msg_image = self.font.render(msg,True,self.text_color,self.button_color)
 		self.msg_image_rect = self.msg_image.get_rect()
-		self.msg_image_rect_center = self.rect.centerx
+		self.msg_image_rect.center = self.rect.center
 			
 	def draw_button(self):
 		#draw blank button and then draw message
