@@ -42,6 +42,9 @@ def check_play_button(ai_settings, screen, stats, play_button, ship, aliens, bul
 	button_clicked = play_button.rect.collidepoint(mouse_x,mouse_y)
 	
 	if button_clicked and not stats.game_active:
+		
+		#reser the game settings.
+		ai_settings.initiliaze_dynamic_settings()
 		#hide the mouse cursor
 		pygame.mouse.set_visible(False)
 		stats.reset_stats()
