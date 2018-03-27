@@ -1,9 +1,11 @@
 import sys
+
 from time import sleep
 
 import pygame
 
 from bullet import Bullet
+
 from alien import Alien
 
 def check_keydown_events(event, ai_settings, screen, ship, bullets):
@@ -65,7 +67,7 @@ def fire_bullet(ai_settings, screen, ship, bullets):
         new_bullet = Bullet(ai_settings, screen, ship)
         bullets.add(new_bullet)
 
-def update_screen(ai_settings, screen, stats, ship, aliens, bullets,play_button):
+def update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets, play_button):
     """Update images on the screen, and flip to the new screen."""
     # Redraw the screen, each pass through the loop.
     screen.fill(ai_settings.bg_color)
@@ -76,14 +78,15 @@ def update_screen(ai_settings, screen, stats, ship, aliens, bullets,play_button)
     ship.blitme()
     aliens.draw(screen)
     
+    #draw the score information
+    sb.show_score()
+    
     # Draw the play button if the game is inactive.    
     if not stats.game_active:
         play_button.draw_button()
 
     # Make the most recently drawn screen visible.
     pygame.display.flip()
-    
-    
     
 def update_bullets(ai_settings, screen, ship, aliens, bullets):
     """Update position of bullets, and get rid of old bullets."""

@@ -8,6 +8,8 @@ from settings import Settings
 
 from game_stats import GameStats
 
+from scoreboard import Scoreboard
+
 from ship import Ship
 
 import game_functions as gf
@@ -22,8 +24,10 @@ def run_game():
     
     #make the play button.
     play_button = Button(ai_settings,screen,"Play")
-    # Create an instance to store game statistics.
+
+    #create an instance to store game statistics and create a scoreboard.
     stats = GameStats(ai_settings)
+    sb = Scoreboard(ai_settings,screen,stats)
     
     # Set the background color.
     bg_color = (230, 230, 230)
@@ -45,6 +49,6 @@ def run_game():
             gf.update_bullets(ai_settings, screen, ship, aliens, bullets)
             gf.update_aliens(ai_settings, stats, screen, ship, aliens, bullets)
         
-        gf.update_screen(ai_settings, screen, stats, ship, aliens, bullets,play_button)
+        gf.update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets,play_button)
 
 run_game()
