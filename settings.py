@@ -39,6 +39,10 @@ class Settings():
 		self.bullet_speed_factor = 3
 		self.ship_speed_factor = 2
 		self.alien_speed_factor = 1
+		
+		#Scoring
+		self.alien_points = 50
+		#we'll increase the points value as the game progresses.
 	
 	def increase_speed(self):
 		'''increae speed settings'''
