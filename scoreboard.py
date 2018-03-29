@@ -51,7 +51,7 @@ class Scoreboard():
 		
 	def prep_level(self):
 		"""Turn the level into a rendered image"""
-		sefl.level_image = self.font.render(str(self.stats.level),True,self.text_color,self.ai_settings.bg_color)
+		self.level_image = self.font.render(str(self.stats.level),True,self.text_color,self.ai_settings.bg_color)
 		
 		#position the level below the score.
 		self.level_rect = self.level_image.get_rect()
