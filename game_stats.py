@@ -16,3 +16,5 @@ class GameStats():
 		'''initiliaze statistics that can change during game'''
 		self.ships_left = self.ai_settings.ship_limit
 		self.score=0
+		#set the initial level of the game
+		self.level = 1
