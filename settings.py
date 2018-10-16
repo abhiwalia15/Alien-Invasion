@@ -4,8 +4,8 @@ class Settings():
 		'''initialize the game's static settings'''
 		#screem resolution
 		
-		self.screen_width = 1400
-		self.screen_height = 700
+		self.screen_width = 1366
+		self.screen_height =728
 		
 		#background color
 		
